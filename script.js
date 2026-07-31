@@ -5,10 +5,10 @@
 const TEAM_MEMBERS = [
   {
     id: 1,
-    name: "Elena Vance",
+    name: "Celia Ahmed",
     role: "Co-Founder & CEO",
     category: "Leadership",
-    experience: "12+ Years",
+    experience: "4+ Years",
     tagline: "Bridging complex technical strategy with human-centered innovation.",
     bio: "Former Principal Strategist at tech accelerators. Elena leads Chameleon Works with a relentless focus on rapid adaptability, market-defining products, and building high-trust engineering cultures.",
     skills: [
@@ -24,15 +24,15 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Chroma Vision — Spotting hidden opportunities in chaotic markets",
     avatarBg: "linear-gradient(135deg, #10B981, #06B6D4)",
-    initials: "EV",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "CA",
+    photo: "celia.jpeg"
   },
   {
     id: 2,
-    name: "Marcus Chen",
+    name: "Omar Mohamed",
     role: "Co-Founder & CTO",
     category: "Engineering",
-    experience: "14+ Years",
+    experience: "4+ Years",
     tagline: "Designing resilient distributed systems that handle millions of requests without a blink.",
     bio: "Ex-BigTech Infrastructure Architect with a passion for high-concurrency Rust backends, edge computing, and zero-downtime microservice migrations.",
     skills: [
@@ -48,12 +48,12 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Zero-Downtime Shift — Transforming legacy backends live in production",
     avatarBg: "linear-gradient(135deg, #3B82F6, #8B5CF6)",
-    initials: "MC",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "OM",
+    photo: "omar1.jpeg"
   },
   {
     id: 3,
-    name: "Sophia Al-Mansoor",
+    name: "Salma Al-Hady",
     role: "Head of AI & Machine Learning",
     category: "AI & Data",
     experience: "9+ Years",
@@ -73,14 +73,14 @@ const TEAM_MEMBERS = [
     chameleonSuperpower: "Synapse Synthesis — Distilling raw data into instant actionable intelligence",
     avatarBg: "linear-gradient(135deg, #EC4899, #8B5CF6)",
     initials: "SA",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    photo: "salmaH.jpeg"
   },
   {
     id: 4,
-    name: "Liam O'Connor",
+    name: "Salwa Mohamed",
     role: "Lead Frontend & UX Architect",
     category: "Engineering",
-    experience: "8+ Years",
+    experience: "3+ Years",
     tagline: "Crafting sub-second, visually hypnotic web applications with butter-smooth animations.",
     bio: "Pixel perfectionist obsessed with WebGL, CSS micro-interactions, accessibility (WCAG AAA), and modern JavaScript design patterns.",
     skills: [
@@ -96,15 +96,15 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Fluid Camouflage — Crafting layouts that adapt natively to any device glass",
     avatarBg: "linear-gradient(135deg, #06B6D4, #3B82F6)",
-    initials: "LO",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "SM",
+    photo: "salwa.jpeg"
   },
   {
     id: 5,
-    name: "Aarav Patel",
+    name: "Yassin Mohamed",
     role: "Principal Backend & Security Lead",
     category: "Engineering",
-    experience: "10+ Years",
+    experience: "1+ Years",
     tagline: "Fortifying applications with military-grade security while keeping APIs blazingly fast.",
     bio: "Specializing in Zero Trust architecture, GraphQL/gRPC services, and automated vulnerability intelligence. Aarav ensures Chameleon Works applications are impenetrable.",
     skills: [
@@ -120,15 +120,15 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Impenetrable Shield — Shielding data before threats can materialize",
     avatarBg: "linear-gradient(135deg, #F59E0B, #EF4444)",
-    initials: "AP",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "YM",
+    photo: "yassin.jpeg"
   },
   {
     id: 6,
-    name: "Zoe Brooks",
+    name: "Hana Ahmed",
     role: "Head of UI/UX & Brand Design",
     category: "Design & UX",
-    experience: "9+ Years",
+    experience: "2+ Years",
     tagline: "Transforming complex user workflows into delightful, effortless digital moments.",
     bio: "Award-winning designer with a background in cognitive psychology. Zoe shapes brand narratives, wireframes, high-fidelity prototypes, and interactive design systems.",
     skills: [
@@ -144,15 +144,15 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Prismatic Polish — Turning obscure requirements into radiant visual elegance",
     avatarBg: "linear-gradient(135deg, #A855F7, #EC4899)",
-    initials: "ZB",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "HA",
+    photo: "Hana.jpeg"
   },
   {
     id: 7,
-    name: "David Miller",
+    name: "Salma Emad",
     role: "Lead Mobile & Cross-Platform Lead",
     category: "Engineering",
-    experience: "7+ Years",
+    experience: "4+ Years",
     tagline: "Building native-feeling iOS and Android experiences from a single robust codebase.",
     bio: "Mobile engineering virtuoso specializing in Flutter, React Native, and iOS Native Swift integration. David brings desktop-class power to pocket screens.",
     skills: [
@@ -168,15 +168,15 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Pocket Morphing — Scaling heavy workstation workflows to mobile hardware",
     avatarBg: "linear-gradient(135deg, #10B981, #3B82F6)",
-    initials: "DM",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "SE",
+    photo: "salmaE.jpeg"
   },
   {
     id: 8,
-    name: "Maya Lin",
+    name: "Eyad Ahmed",
     role: "Senior DevOps & Cloud Infra Lead",
     category: "AI & Data",
-    experience: "8+ Years",
+    experience: "3+ Years",
     tagline: "Automating cloud infrastructure to deploy in seconds with enterprise reliability.",
     bio: "Kubernetes wizard and Cloud Native advocate. Maya builds self-healing infrastructure on AWS, GCP, and Azure using Terraform and GitOps workflows.",
     skills: [
@@ -192,12 +192,12 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Cloud Auto-Healing — Instant automatic recovery before any metric drops",
     avatarBg: "linear-gradient(135deg, #6366F1, #06B6D4)",
-    initials: "ML",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "EA",
+    photo: "eyad2.jpeg"
   },
   {
     id: 9,
-    name: "Tariq Morales",
+    name: "Sama Ahmed",
     role: "Product Strategy & Growth Lead",
     category: "Product & Strategy",
     experience: "7+ Years",
@@ -216,12 +216,12 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Velocity Velocity — Accelerating execution without missing a single detail",
     avatarBg: "linear-gradient(135deg, #F43F5E, #FB923C)",
-    initials: "TM",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "SA",
+    photo: "sama.jpeg"
   },
   {
     id: 10,
-    name: "Chloe Dupont",
+    name: "Logien Mohamed",
     role: "Creative Director & Motion Lead",
     category: "Design & UX",
     experience: "9+ Years",
@@ -240,8 +240,8 @@ const TEAM_MEMBERS = [
     ],
     chameleonSuperpower: "Kinetic Pulse — Turning flat layouts into living, breathing digital art",
     avatarBg: "linear-gradient(135deg, #8B5CF6, #F43F5E)",
-    initials: "CD",
-    photo: null // TODO: set to a photo path/URL, e.g. "assets/team/elena.jpg"
+    initials: "LM",
+    photo: "logien.jpeg"
   }
 ];
 
@@ -350,28 +350,28 @@ document.addEventListener('DOMContentLoaded', () => {
       card.setAttribute('data-member-id', m.id);
 
       const cardAvatarHtml = m.photo
-        ? `<div className="avatar-circle avatar-photo"><img src="${m.photo}" alt="${m.name}" /></div>`
-        : `<div className="avatar-circle avatar-placeholder" style="background: ${m.avatarBg}">
+        ? `<div class="avatar-circle avatar-photo"><img src="${m.photo}" alt="${m.name}" /></div>`
+        : `<div class="avatar-circle avatar-placeholder" style="background: ${m.avatarBg}">
             <span>${m.initials}</span>
           </div>`;
 
       card.innerHTML = `
-        <div className="card-top">
+        <div class="card-top">
           ${cardAvatarHtml}
-          <div className="exp-badge">${m.experience}</div>
+          <div class="exp-badge">${m.experience}</div>
         </div>
-        <div className="member-info">
-          <span className="member-role">${m.role}</span>
-          <h3 className="member-name">${m.name}</h3>
-          <p className="member-tagline">${m.tagline}</p>
+        <div class="member-info">
+          <span class="member-role">${m.role}</span>
+          <h3 class="member-name">${m.name}</h3>
+          <p class="member-tagline">${m.tagline}</p>
         </div>
-        <div className="superpower-snippet">
+        <div class="superpower-snippet">
           <i data-lucide="zap"></i>
           <span>${m.chameleonSuperpower.split('—')[0]}</span>
         </div>
-        <div className="card-footer">
-          <span className="view-bio-text">View Full Bio & Stats</span>
-          <i data-lucide="arrow-up-right" className="arrow-icon"></i>
+        <div class="card-footer">
+          <span class="view-bio-text">View Full Bio & Stats</span>
+          <i data-lucide="arrow-up-right" class="arrow-icon"></i>
         </div>
       `;
 
@@ -444,12 +444,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const item = document.createElement('div');
       item.className = 'skill-item';
       item.innerHTML = `
-        <div className="skill-info">
+        <div class="skill-info">
           <span>${s.name}</span>
-          <span className="skill-percent">${s.level}%</span>
+          <span class="skill-percent">${s.level}%</span>
         </div>
-        <div className="skill-bar-track">
-          <div className="skill-bar-fill" style="width: ${s.level}%"></div>
+        <div class="skill-bar-track">
+          <div class="skill-bar-fill" style="width: ${s.level}%"></div>
         </div>
       `;
       modalSkills.appendChild(item);
@@ -459,7 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modalAchievements.innerHTML = '';
     member.achievements.forEach(ach => {
       const li = document.createElement('li');
-      li.innerHTML = `<i data-lucide="award" className="ach-icon"></i><span>${ach}</span>`;
+      li.innerHTML = `<i data-lucide="award" class="ach-icon"></i><span>${ach}</span>`;
       modalAchievements.appendChild(li);
     });
 
@@ -560,11 +560,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const item = document.createElement('div');
     item.className = `glass-card faq-item ${idx === 0 ? 'open' : ''}`;
     item.innerHTML = `
-      <div className="faq-question">
-        <span className="q-text">${faq.q}</span>
-        <i data-lucide="chevron-down" className="chevron"></i>
+      <div class="faq-question">
+        <span class="q-text">${faq.q}</span>
+        <i data-lucide="chevron-down" class="chevron"></i>
       </div>
-      <div className="faq-answer ${idx === 0 ? '' : 'hidden'}">
+      <div class="faq-answer ${idx === 0 ? '' : 'hidden'}">
         <p>${faq.a}</p>
       </div>
     `;
