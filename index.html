@@ -892,6 +892,63 @@
         });
       }
     });
+    // Listener for "Lock In Estimate" Button
+document.addEventListener('DOMContentLoaded', () => {
+  const lockEstimateBtn = document.getElementById('lockEstimateBtn');
+
+  if (lockEstimateBtn) {
+    lockEstimateBtn.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      // 1. Collect currently selected values from the UI
+      const activePlatformEl = document.querySelector('.estimator-group .option-card.active span');
+      const selectedScope = activePlatformEl ? activePlatformEl.innerText : 'Not specified';
+      
+      const squadSize = document.getElementById('squadRange') ? document.getElementById('squadRange').value : null;
+
+      const activeSpeedEl = document.querySelector('.speed-pill.active');
+      const selectedVelocity = activeSpeedEl ? activeSpeedEl.innerText : 'Not specified';
+
+      const delivery = document.getElementById('estDelivery') ? document.getElementById('estDelivery').innerText : '';
+      const budget = document.getElementById('estBudget') ? document.getElementById('estBudget').innerText : '';
+
+      // 2. Disable button temporarily to prevent double submission
+      lockEstimateBtn.disabled = true;
+      lockEstimateBtn.innerText = 'Saving Estimate...';
+
+      // 3. Send to Supabase project_estimates table
+      const { data, error } = await supabaseClient
+        .from('project_estimates')
+        .insert([
+          {
+            scope: selectedScope,
+            squad_size: squadSize,
+            velocity: selectedVelocity,
+            estimated_delivery: delivery,
+            estimated_budget: budget
+          }
+        ]);
+
+      if (error) {
+        console.error('Error saving estimate:', error.message);
+        alert('Could not save estimate: ' + error.message);
+        lockEstimateBtn.disabled = false;
+        lockEstimateBtn.innerHTML = '<span>Lock In Estimate</span><i data-lucide="arrow-right"></i>';
+      } else {
+        alert('Estimate saved successfully!');
+        
+        // Optional: Scroll down to contact form and prefill details
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        lockEstimateBtn.disabled = false;
+        lockEstimateBtn.innerHTML = '<span>Estimate Locked ✓</span>';
+      }
+    });
+  }
+});
   </script>
 </body>
 </body>
