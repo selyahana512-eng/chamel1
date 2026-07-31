@@ -868,7 +868,7 @@
           // 3. Insert into your Supabase table
           // CHANGE 'contacts' to your actual Supabase table name!
           const { data, error } = await supabaseClient
-            .from('contacts') 
+            .from('contact_requests') 
             .insert([
               { 
                 name: name, 
