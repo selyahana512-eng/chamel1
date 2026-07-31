@@ -23,7 +23,7 @@
   <header class="navbar-header" id="navbar">
     <div class="container nav-container">
       <a href="#" class="brand-logo">
-        <img src="assets/logo.jpeg" alt="Chameleon Works logo" class="brand-logo-img" />
+        <img src="logo.jpeg" alt="Chameleon Works logo" class="brand-logo-img" />
       </a>
 
       <nav class="desktop-nav">
@@ -101,8 +101,8 @@
         </div>
 
         <h1 class="hero-title">
-          We Adapt. We Build. <br />
-          <span class="gradient-text">We Transform Ideas.</span>
+          From Vision <br />
+          <span class="gradient-text">To Value.</span>
         </h1>
 
         <p class="hero-description">
@@ -893,29 +893,33 @@
       }
     });
     // Listener for "Lock In Estimate" Button
-lockEstimateBtn.addEventListener('click', (e) => {
-  e.preventDefault();
+    document.addEventListener('DOMContentLoaded', () => {
+      const lockEstimateBtn = document.getElementById('lockEstimateBtn');
+      if (!lockEstimateBtn) return;
 
-  const activePlatformEl = document.querySelector('.estimator-group .option-card.active span');
-  const selectedScope = activePlatformEl ? activePlatformEl.innerText : 'Not specified';
-  const squadSize = document.getElementById('squadRange')?.value;
-  const activeSpeedEl = document.querySelector('.speed-pill.active');
-  const selectedVelocity = activeSpeedEl ? activeSpeedEl.innerText : 'Not specified';
-  const budget = document.getElementById('estBudget')?.innerText;
+      lockEstimateBtn.addEventListener('click', (e) => {
+        e.preventDefault();
 
-  // Format estimate string
-  const estimateSummary = `${selectedScope} | Squad: ${squadSize} | Velocity: ${selectedVelocity} | Est: ${budget}`;
+        const activePlatformEl = document.querySelector('.estimator-group .option-card.active span');
+        const selectedScope = activePlatformEl ? activePlatformEl.innerText : 'Not specified';
+        const squadSize = document.getElementById('squadRange')?.value;
+        const activeSpeedEl = document.querySelector('.speed-pill.active');
+        const selectedVelocity = activeSpeedEl ? activeSpeedEl.innerText : 'Not specified';
+        const budget = document.getElementById('estBudget')?.innerText;
 
-  // Pre-fill into contact form textarea
-  const detailsInput = document.getElementById('inputDetails');
-  if (detailsInput) {
-    detailsInput.value = `[Selected Estimate: ${estimateSummary}]\n\n` + detailsInput.value;
-  }
+        // Format estimate string
+        const estimateSummary = `${selectedScope} | Squad: ${squadSize} | Velocity: ${selectedVelocity} | Est: ${budget}`;
 
-  // Scroll user down to the contact form
-  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-});
+        // Pre-fill into contact form textarea
+        const detailsInput = document.getElementById('inputDetails');
+        if (detailsInput) {
+          detailsInput.value = `[Selected Estimate: ${estimateSummary}]\n\n` + detailsInput.value;
+        }
+
+        // Scroll user down to the contact form
+        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
   </script>
-</body>
 </body>
 </html>
