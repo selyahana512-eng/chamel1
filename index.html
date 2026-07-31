@@ -839,19 +839,60 @@
   </div>
 
   <script src="script.js"></script>
+  
+  <!-- Supabase JS Library -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  const SUPABASE_URL = 'https://maaodgyatxshrsgwnvnp.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hYW9kZ3lhdHhzaHJzZ3dudm5wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MDU2ODgsImV4cCI6MjEwMTA4MTY4OH0.umLuNYJ5GlBfFgginriyQ74mNQZQFBIWSqT0rgbAKio';
-  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  
+  <script>
+    // 1. Initialize Supabase Client with a unique variable name
+    const SUPABASE_URL = 'https://maaodgyatxshrsgwnvnp.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1hYW9kZ3lhdHhzaHJzZ3dudm5wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU1MDU2ODgsImV4cCI6MjEwMTA4MTY4OH0.umLuNYJ5GlBfFgginriyQ74mNQZQFBIWSqT0rgbAKio';
+    
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  // Fetch data example
-  async function fetchData() {
-    const { data, error } = await supabase.from('your_table_name').select('*');
-    if (error) console.error('Error:', error);
-    else console.log('Data:', data);
-  }
-  fetchData();
-</script>
+    // 2. Attach Form Submission Listener
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactForm = document.getElementById('contactForm');
+      const successToast = document.getElementById('successToast');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+          e.preventDefault(); // Stop default browser refresh
+
+          // Get values from form inputs
+          const name = document.getElementById('inputName').value;
+          const email = document.getElementById('inputEmail').value;
+          const company = document.getElementById('inputCompany').value;
+          const details = document.getElementById('inputDetails').value;
+
+          // 3. Insert into your Supabase table
+          // CHANGE 'contacts' to your actual Supabase table name!
+          const { data, error } = await supabaseClient
+            .from('contacts') 
+            .insert([
+              { 
+                name: name, 
+                email: email, 
+                company: company, 
+                details: details 
+              }
+            ]);
+
+          if (error) {
+            console.error('Error inserting data into Supabase:', error.message);
+            alert('Error submitting form: ' + error.message);
+          } else {
+            console.log('Submission successful:', data);
+            
+            // Show success UI
+            contactForm.reset();
+            contactForm.classList.add('hidden');
+            if (successToast) successToast.classList.remove('hidden');
+          }
+        });
+      }
+    });
+  </script>
+</body>
 </body>
 </html>
