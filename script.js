@@ -10,7 +10,7 @@ const TEAM_MEMBERS = [
     category: "Leadership",
     experience: "4+ Years",
     tagline: "Bridging complex technical strategy with human-centered innovation.",
-    bio: "Former Principal Strategist at tech accelerators. Elena leads Chameleon Works with a relentless focus on rapid adaptability, market-defining products, and building high-trust engineering cultures.",
+    bio: "Former Principal Strategist at tech accelerators. Celia leads Chameleon Works with a relentless focus on rapid adaptability, market-defining products, and building high-trust engineering cultures.",
     skills: [
       { name: "Product Vision & Strategy", level: 98 },
       { name: "Venture Dynamics", level: 95 },
@@ -58,7 +58,7 @@ const TEAM_MEMBERS = [
     category: "AI & Data",
     experience: "9+ Years",
     tagline: "Fine-tuning neural architectures to deliver practical, enterprise-grade AI intelligence.",
-    bio: "PhD in Computational Intelligence. Sophia builds custom LLM integrations, retrieval-augmented generation (RAG) engines, and real-time computer vision models for client products.",
+    bio: "PhD in Computational Intelligence. Salma builds custom LLM integrations, retrieval-augmented generation (RAG) engines, and real-time computer vision models for client products.",
     skills: [
       { name: "LLM Fine-Tuning & RAG", level: 97 },
       { name: "PyTorch & Deep Learning", level: 95 },
@@ -106,7 +106,7 @@ const TEAM_MEMBERS = [
     category: "Engineering",
     experience: "1+ Years",
     tagline: "Fortifying applications with military-grade security while keeping APIs blazingly fast.",
-    bio: "Specializing in Zero Trust architecture, GraphQL/gRPC services, and automated vulnerability intelligence. Aarav ensures Chameleon Works applications are impenetrable.",
+    bio: "Specializing in Zero Trust architecture, GraphQL/gRPC services, and automated vulnerability intelligence. Yassin ensures Chameleon Works applications are impenetrable.",
     skills: [
       { name: "Zero-Trust Security & OAuth", level: 97 },
       { name: "GraphQL & gRPC APIs", level: 94 },
@@ -130,7 +130,7 @@ const TEAM_MEMBERS = [
     category: "Design & UX",
     experience: "2+ Years",
     tagline: "Transforming complex user workflows into delightful, effortless digital moments.",
-    bio: "Award-winning designer with a background in cognitive psychology. Zoe shapes brand narratives, wireframes, high-fidelity prototypes, and interactive design systems.",
+    bio: "Award-winning designer with a background in cognitive psychology. Hana shapes brand narratives, wireframes, high-fidelity prototypes, and interactive design systems.",
     skills: [
       { name: "Figma & Design Systems", level: 99 },
       { name: "UX Research & Usability", level: 96 },
@@ -154,7 +154,7 @@ const TEAM_MEMBERS = [
     category: "Engineering",
     experience: "4+ Years",
     tagline: "Building native-feeling iOS and Android experiences from a single robust codebase.",
-    bio: "Mobile engineering virtuoso specializing in Flutter, React Native, and iOS Native Swift integration. David brings desktop-class power to pocket screens.",
+    bio: "Mobile engineering virtuoso specializing in Flutter, React Native, and iOS Native Swift integration. Salma brings desktop-class power to pocket screens.",
     skills: [
       { name: "Flutter & Dart", level: 97 },
       { name: "React Native & Expo", level: 92 },
@@ -178,7 +178,7 @@ const TEAM_MEMBERS = [
     category: "AI & Data",
     experience: "3+ Years",
     tagline: "Automating cloud infrastructure to deploy in seconds with enterprise reliability.",
-    bio: "Kubernetes wizard and Cloud Native advocate. Maya builds self-healing infrastructure on AWS, GCP, and Azure using Terraform and GitOps workflows.",
+    bio: "Kubernetes wizard and Cloud Native advocate. Eyad builds self-healing infrastructure on AWS, GCP, and Azure using Terraform and GitOps workflows.",
     skills: [
       { name: "Kubernetes & Docker", level: 97 },
       { name: "Terraform & IaC", level: 96 },
@@ -226,7 +226,7 @@ const TEAM_MEMBERS = [
     category: "Design & UX",
     experience: "9+ Years",
     tagline: "Breathes life into static interfaces with storytelling 3D models and interactive visual dynamics.",
-    bio: "Master of motion graphics, Spline 3D, Blender, and kinetic typography. Chloe ensures every brand under Chameleon Works leaves an unforgettable visual mark.",
+    bio: "Master of motion graphics, Spline 3D, Blender, and kinetic typography. Logien ensures every brand under Chameleon Works leaves an unforgettable visual mark.",
     skills: [
       { name: "3D Animation & Blender", level: 96 },
       { name: "Motion Design & Lottie", level: 98 },
