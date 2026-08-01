@@ -920,6 +920,53 @@
         document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
       });
     });
+    document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+  const successToast = document.getElementById('successToast');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Get values from inputs
+      const name = document.getElementById('inputName').value;
+      const email = document.getElementById('inputEmail').value;
+      const company = document.getElementById('inputCompany').value;
+      const details = document.getElementById('inputDetails').value;
+
+      // 1. Check if a team member was pre-selected (reads from your prefill badge)
+      const prefillBadge = document.getElementById('prefillMemberPill');
+      const memberNameEl = document.getElementById('prefillMemberName');
+      
+      // If the badge is visible and contains a name, save it; otherwise set to null
+      const requestedMember = (prefillBadge && !prefillBadge.classList.contains('hidden')) 
+        ? memberNameEl.innerText 
+        : null;
+
+      // 2. Insert into Supabase
+      const { data, error } = await supabaseClient
+        .from('contact_requests')
+        .insert([
+          { 
+            name: name, 
+            email: email, 
+            company: company, 
+            details: details,
+            requested_member: requestedMember // <-- Added team member field
+          }
+        ]);
+
+      if (error) {
+        console.error('Error inserting data:', error.message);
+        alert('Error submitting form: ' + error.message);
+      } else {
+        contactForm.reset();
+        contactForm.classList.add('hidden');
+        if (successToast) successToast.classList.remove('hidden');
+      }
+    });
+  }
+});
   </script>
 </body>
 </html>
