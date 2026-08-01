@@ -145,7 +145,7 @@ const TEAM_MEMBERS = [
     chameleonSuperpower: "Prismatic Polish — Turning obscure requirements into radiant visual elegance",
     avatarBg: "linear-gradient(135deg, #A855F7, #EC4899)",
     initials: "HA",
-    photo: "Hana.jpeg"
+    photo: "hana.jpeg"
   },
   {
     id: 7,
